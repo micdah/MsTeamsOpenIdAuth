@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>MsTeamsBot</AssemblyName>
+    <RootNamespace>MsTeamsBot</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Middleware\**" />
+    <Compile Remove="tabs\**" />
+    <Content Remove="Middleware\**" />
+    <Content Remove="tabs\**" />
+    <EmbeddedResource Remove="Middleware\**" />
+    <EmbeddedResource Remove="tabs\**" />
+    <None Remove="Middleware\**" />
+    <None Remove="tabs\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.Bot.Builder.Azure" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Core" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Core.Extensions" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.0.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.0.1-preview" />
+    <PackageReference Include="Serilog" Version="2.7.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00777" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="manifest-tomi\manifest.json" />
+    <_ContentIncludedByDefault Remove="Properties\launchSettings.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\tabs\index.html" />
+    <_ContentIncludedByDefault Remove="wwwroot\tabs\meetingminutes.html" />
+  </ItemGroup>
+</Project>
